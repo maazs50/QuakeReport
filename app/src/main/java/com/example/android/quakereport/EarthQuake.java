@@ -6,14 +6,23 @@ package com.example.android.quakereport;
 
 public class EarthQuake {
     private double magnitude;
-    private String city , date;
+    private String city;
+
+    public String getmUrl() {
+        return mUrl;
+    }
+
+    private String mUrl;
+
+    private long date;
 
 
 
-    public EarthQuake(double magnitude, String city, String date) {
+    public EarthQuake(double magnitude, String city, long date,String url) {
         this.city=city;
         this.date= date;
         this.magnitude=magnitude;
+        mUrl=url;
     }
 
     public double getMagnitude() {
@@ -24,7 +33,7 @@ public class EarthQuake {
         return city;
     }
 
-    public String getDate() {
+    public long getDate() {
         return date;
     }
-}
+    }
